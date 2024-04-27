@@ -1,0 +1,145 @@
+/* geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    background: linear-gradient(45deg, rgba(25,3,97,1) 0%, rgba(187,0,255,1) 100%);
+    height: 100vh;
+
+    /* NA TAG MAIN NÃO DARIA CERTO */
+    display: grid;
+    place-content: center;
+}
+
+/* closed card */
+
+.closed-card {
+    width: 42.8rem;
+    height: 42.4rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+    border-radius: .5rem;
+
+    background-color: #ffffff;
+    box-shadow: 0 2.0rem 5.0rem rgba(0, 0, 0, 0.8);
+
+    /* margin: auto;
+    transform: translateY(30%); SÓ USAR QUANDO AGRUPAR DENTRO DA TAG MAIN, NO BODY BASTA USAR DISPLAY GRID, PLACE-CONTENT CENTER */
+    
+    margin-top: -8rem;
+    text-align: center;
+}
+
+.closed-card h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #34355B;
+}
+
+.closed-card p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #34355B;
+
+    margin: 1.7rem 0;
+}
+
+#closed-cookie {
+    cursor: pointer;
+}
+
+#closed-cookie:hover {
+    animation: shake 0.2s ease infinite;
+}
+
+/* opened card */
+
+.opened-card {
+    width: 42.8rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+    border-radius: .5rem;
+
+    background-color: #ffffff;
+    box-shadow: 0 2.0rem 5.0rem rgba(0, 0, 0, 0.8);
+    
+    margin-top: -8rem;
+    text-align: center;
+}
+
+.opened-card h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #34355B;
+}
+
+.opened-card p {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #000000;
+
+    margin: 1.7rem 0;
+    padding: 1.0rem;
+    background-color: #E4EDF1;
+
+    box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 0.5);
+    animation: appear 2s ease forwards; /* A animação avança e permanece no estado final */
+}
+
+.opened-card button {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+
+    margin-top: 1.7rem;
+    padding: 1.6rem;
+    background-color: #FF9500;
+
+    border: none;
+    border-radius: .4rem;
+
+    cursor: pointer;
+    transition: background .4s;
+
+}
+
+.opened-card button:hover {
+    background-color: #bc730c;
+}
+
+/* animations */
+
+@keyframes shake {
+    0% {margin-left: 0;}
+    20% {margin-left: 5px;}
+    40% {margin-top: 5px;}
+    60% {margin-left: 0;}
+    80% {margin-top: -5px;}
+    100% {margin-left: 0;}
+  }
+
+@keyframes appear {
+    0% {
+        opacity: 0.5;
+        transform: scale(0.5) translateY(200%)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
